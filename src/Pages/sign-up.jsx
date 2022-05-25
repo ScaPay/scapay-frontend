@@ -3,11 +3,11 @@ import DropDown from "../components/dropdown";
 import Scapay from "../assets/Scapay.png"
 import Button from "../components/button";
 
-const SignUp = () => {
+const textDivStyles = "text-slate-700 mt-4"
+const textSpanStyles = "p-2 after:content-['*'] after:ml-0.5 after:text-red-500 block font-bold"
+const textInputStyles = "w-full rounded-xl h-10 placeholder-text-slate-400 pl-[14px] border-zinc-600 border-2"
 
-    const textDivStyles = "text-slate-700 mt-4"
-    const textSpanStyles = "p-2 after:content-['*'] after:ml-0.5 after:text-red-500 block font-bold"
-    const textInputStyles = "w-full rounded-xl h-10 placeholder-text-slate-400 pl-[14px] border-zinc-600 border-2"
+const SignUp = () => {
 
     const options = [
         { label: 'Nigeria', value: 'ng' },
@@ -109,4 +109,5 @@ const SignUp = () => {
   )
 }
 
+export {textDivStyles, textInputStyles, textSpanStyles}
 export default SignUp
