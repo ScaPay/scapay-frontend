@@ -1,5 +1,6 @@
 import { useState } from "react";
 import DropDown from "../components/dropdown";
+import Scapay from "../assets/Scapay.png"
 
 const SignUp = () => {
 
@@ -16,9 +17,12 @@ const SignUp = () => {
       };
     
   return (
+    <div>
+         <div className="h-1/5 w-1/5 mx-auto">
+            <img src={Scapay} alt="logo"/>
+        </div>
     <div className="w-full max-w-screen-md mx-auto h-screen">
-
-        <div className="flex justify-center rounded-xl bg-white shadow-md text-sm text-slate-700"> 
+        <div className="flex justify-center rounded-2xl bg-white shadow-lg text-sm text-slate-700"> 
             <form className="w-9/12">
             <div className="text-slate-700 mt-4">
             <span className="p-2 after:content-['*'] after:ml-0.5 after:text-red-500 block font-bold">Full name</span>
@@ -56,21 +60,27 @@ const SignUp = () => {
                 <span className="font-bold md:mr-10">Verify with:</span>
 
                 <label className="">                
-                <input type="radio" className="md:mr-2" name="contact" value="message"/>
+                <input type="radio" className="md:mr-2 h-4 w-4" name="contact" value="message"/>
                 <span className="md:mr-10">Text message</span>
                 </label>
 
 
                 <label>
-                <input type="radio" className="md:mr-2" name="contact" value="email"/>
+                <input type="radio" className="md:mr-2 h-4 w-4" name="contact" value="email"/>
                 <span className="md:mr-10">Email</span>
                 </label>
-                
             </div>
-            
 
+            <div className="block">
+            <label>
+                <input type="checkbox" className="md:mr-2 h-4 w-4" name="acknowledgment" value=""/>
+                <span>Send me marketing and promotional emails</span>
+                </label>
+            </div>
+    
         </form>
         </div>
+    </div>
     </div>
   )
 }
