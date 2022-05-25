@@ -28,7 +28,11 @@ const SignUp = () => {
         </div>
     <div className="w-full max-w-screen-md mx-auto h-screen">
         <div className="flex justify-center rounded-2xl bg-white shadow-lg text-sm text-slate-700"> 
+            
             <form className="w-9/12">
+
+            <p className="text-3xl font-bold my-10 text-center ">Let's get you started with <br/> your free Scapay Account</p>
+
             <div className={textDivStyles}>
             <span className={textSpanStyles}>Full name</span>
             <input type="text" id="fullname" className={textInputStyles} placeholder="Firstname Lastname" />
@@ -93,12 +97,11 @@ const SignUp = () => {
                 </span>
             </div>
 
-            <div className="my-5 w-full">
+            <div className="my-10">
             <Button styles="bg-primary text-white" to="/sign-up">
                 Get Started
             </Button>
             </div>
-    
         </form>
         </div>
     </div>
