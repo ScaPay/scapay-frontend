@@ -43,7 +43,7 @@ const HomePage = () => {
           </div>
           <div className="btns pt-16 md:flex pb-10">
             <div>
-              <Button styles="bg-primary text-white ">
+              <Button styles="bg-primary text-white " to="/sign-up">
                 create a free account
               </Button>
             </div>
