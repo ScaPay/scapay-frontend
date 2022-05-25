@@ -1,7 +1,8 @@
+/* eslint-disable import/no-anonymous-default-export */
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-
+import Scapay from "../assets/Scapay.png"
 
 
 export default () => {
@@ -15,15 +16,16 @@ const handleToggle = () => {
     <nav className=" pt-6 lg:pt-2 ">
     <div className="first-nav flex justify-between    ">
       <div className="logo items-center flex ">
+        <img src={Scapay} alt="" className="object-contain h-72 absolute pt-5"></img>
         {/* <img class="block h-8 w-auto mr-2" src={glogo} alt="Workflow" /> */}
         {/* <img class="block w-8 h-8 " src={logo} alt="Workflow" /> */}
 
-        <h1 className="font-bold  md:block text-primary items-center text-lg md:text-4xl   ">
+        {/* <h1 className="font-bold  md:block text-primary items-center text-lg md:text-4xl   ">
         $<span className="border-r-2 border-gray-300 pl-1"></span>
           <span className="text-primary text-center mt-auto md:text-4xl pl-1">
             sca<span className="text-secondary">pay</span>
           </span>
-        </h1>
+        </h1> */}
       </div>
       <Link to="" onClick={handleToggle}>
         <div class="lg:hidden flex items-center ">
