@@ -7,9 +7,9 @@ const SignIn = () => {
 
     return (
         <div>
-         <div className="md:h-1/5 md:w-1/5 mx-auto">
-            <img src={Scapay} alt="logo"/>
-        </div>
+            <div className="md:h-1/5 md:w-1/5 mx-auto">
+                <img src={Scapay} alt="logo"/>
+            </div>
         <div className="w-full max-w-screen-md mx-auto h-screen">
         <div className="flex justify-center rounded-2xl bg-white shadow-lg text-sm text-slate-700"> 
         

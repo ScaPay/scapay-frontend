@@ -48,7 +48,7 @@ const handleToggle = () => {
 
       <div className={` hidden lg:block   sm:ml-6 pt-1 pl-3" `}>
         <div class="flex space-x-12 items-baseline item-center">
-          <Link to="/feeds">
+          <Link to="/sign-up">
             <a
               href="#"
               class=" hover:underline hover:underline-offset-8 text-secondary3    text-sm font-semibold  hover:text-primary px-3 py-2 rounded-md "
