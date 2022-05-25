@@ -1,8 +1,13 @@
 import { useState } from "react";
 import DropDown from "../components/dropdown";
 import Scapay from "../assets/Scapay.png"
+import Button from "../components/button";
 
 const SignUp = () => {
+
+    const textDivStyles = "text-slate-700 mt-4"
+    const textSpanStyles = "p-2 after:content-['*'] after:ml-0.5 after:text-red-500 block font-bold"
+    const textInputStyles = "w-full rounded-xl h-10 placeholder-text-slate-400 pl-[14px] border-zinc-600 border-2"
 
     const options = [
         { label: 'Nigeria', value: 'ng' },
@@ -18,35 +23,35 @@ const SignUp = () => {
     
   return (
     <div>
-         <div className="h-1/5 w-1/5 mx-auto">
+         <div className="md:h-1/5 md:w-1/5 mx-auto">
             <img src={Scapay} alt="logo"/>
         </div>
     <div className="w-full max-w-screen-md mx-auto h-screen">
         <div className="flex justify-center rounded-2xl bg-white shadow-lg text-sm text-slate-700"> 
             <form className="w-9/12">
-            <div className="text-slate-700 mt-4">
-            <span className="p-2 after:content-['*'] after:ml-0.5 after:text-red-500 block font-bold">Full name</span>
-            <input type="text" id="fullname" className="w-full rounded-xl h-10 placeholde-text-slate-400 pl-[14px] border-zinc-600 border-2" placeholder="Firstname Lastname" />
+            <div className={textDivStyles}>
+            <span className={textSpanStyles}>Full name</span>
+            <input type="text" id="fullname" className={textInputStyles} placeholder="Firstname Lastname" />
             </div>
             
-            <div className="text-slate-700 mt-4">
+            <div className={textDivStyles}>
             <span className="p-2 after:content-['*'] after:ml-0.5 after:text-red-500 block  font-bold">Email</span>
-            <input type="email" id="email" className="w-full rounded-xl h-10 placeholder-text-slate-400 pl-[14px] border-zinc-600 border-2" placeholder="name@example.com" />
+            <input type="email" id="email" className={textInputStyles} placeholder="name@example.com" />
             </div>
 
-            <div className="text-slate-700 mt-4">
-            <span className="p-2 after:content-['*'] after:ml-0.5 after:text-red-500 block font-bold">Country/Region</span>
+            <div className={textDivStyles}>
+            <span className={textSpanStyles}>Country/Region</span>
             <DropDown options={options} value={value} onChange={handleChange} />
             </div>
 
-            <div className="text-slate-700 mt-4">
-            <span className="p-2 after:content-['*'] after:ml-0.5 after:text-red-500 block font-bold">Password</span>
-            <input type="password" id="password" className="w-full rounded-xl h-10 placeholder-text-slate-400 pl-[14px] border-zinc-600 border-2" placeholder="Password" />
+            <div className={textDivStyles}>
+            <span className={textSpanStyles}>Password</span>
+            <input type="password" id="password" className={textInputStyles} placeholder="Password" />
             </div>
 
-            <div className="text-slate-700 mt-4">
-            <span className="p-2 after:content-['*'] after:ml-0.5 after:text-red-500 block font-bold">Phone number</span>
-            <input type="phone" id="phone" className="w-full rounded-xl h-10 placeholder-text-slate-400 pl-[14px] border-zinc-600 border-2" placeholder="+" />
+            <div className={textDivStyles}>
+            <span className={textSpanStyles}>Phone number</span>
+            <input type="phone" id="phone" className={textInputStyles} placeholder="+" />
             </div>
 
             <div className="my-4 block">
@@ -75,7 +80,23 @@ const SignUp = () => {
             <label>
                 <input type="checkbox" className="md:mr-2 h-4 w-4" name="acknowledgment" value=""/>
                 <span>Send me marketing and promotional emails</span>
-                </label>
+            </label>
+            </div>
+
+
+            <div className="mt-5">
+                <input type="checkbox" className="md:mr-2 h-4 w-4" name="acknowledgment" value=""/>
+                <span>I acknowledge that I have read and hereby accept the terms and conditions in Scapay's and its third  
+                    <a href="" className="text-blue-600 hover:text-blue-700 transition duration-300 ease-in-out mb-4">
+                        &nbsp; party partner's, Terms of Use, Merchant Agreement and Privacy Policy.
+                    </a>
+                </span>
+            </div>
+
+            <div className="my-5 w-full">
+            <Button styles="bg-primary text-white" to="/sign-up">
+                Get Started
+            </Button>
             </div>
     
         </form>
