@@ -73,39 +73,43 @@ const HomePage = () => {
       <div className="mx-8 md:w-3/4 md:mx-auto py-16">
         <SSection
           styles="order-2"
-          imgW="lg:w-5/6"
+          imgW="lg:w-4/6"
           orderText="order-2"
           orderImg="order-1"
           title="Investment"
           img={img10}
+          height="lg:h-4/6"
         >
           As a business you can choose to invest your coins for even more profit
         </SSection>
         <SSection
           title="Liquidity"
           orderText="order-1"
-          imgW="lg:w-1/4"
+          imgW="lg:w-3/6"
           orderImg="order-2"
           span="for customers"
+          height="lg:h-3/6"
           img={img6}
         >
           You can now spend your stable coins to purchase anything on any
           platform where our api has been integrated as a payment gateway.
         </SSection>
         <SSection
-          imgW="lg:w-1/4"
+          imgW="lg:w-3/6"
           orderText="order-2"
           orderImg="order-1"
           title="Recieve payments"
           span=" from anywere"
           img={img9}
+          height="lg:h-3/6"
         >Businesses can receive payments from anywhere in the world either in stable crypto tokens or fiat, it is totally up to you.</SSection>
         <SSection
-          imgW="lg:w-1/4"
+          imgW="w-2/5"
           orderText="order-1"
           orderImg="order-2"
           title="Swapping "
           span="tokens"
+          height="lg:h-2/5"
           img={img7}
         >Swap your tokens for others either mid-purchase or any other time.</SSection>
         <JoinUs />
