@@ -37,8 +37,8 @@ const HomePage = () => {
               </p>
             </div>
             <div className="img  hidden md:block ">
-              {/* <img src={img1} alt="" className="object-contain h-40" /> */}
-              <img src={img2} alt="" className="object-contain h-80 absolute" />
+              <img src={img2} alt="wallet" className="object-contain h-4/6 absolute" />
+              <img src={img1} alt="" className="object-contain h-60 mt-64 ml-24" />
             </div>
           </div>
           <div className="btns pt-16 md:flex pb-10">
