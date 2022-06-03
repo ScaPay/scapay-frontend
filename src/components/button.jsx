@@ -4,7 +4,7 @@ import propTypes from 'prop-types';
 
 const Button = ({ styles, children, to }) => {
   return (
-    <div className="items-center ">
+    <div className="items-center">
       <Link
         to={to}
         

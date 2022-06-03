@@ -2,60 +2,79 @@ import { useState } from "react";
 import DropDown from "../components/dropdown";
 import Scapay from "../assets/Scapay.png"
 import Button from "../components/button";
+import { api } from "../api"
+
+
+const textDivStyles = "text-slate-700 mt-4"
+const textSpanStyles = "p-2 after:content-['*'] after:ml-0.5 after:text-red-500 block font-bold"
+const textInputStyles = "w-full rounded-xl h-10 placeholder-text-slate-400 pl-[14px] border-zinc-600 border-2"
 
 const SignUp = () => {
-
-    const textDivStyles = "text-slate-700 mt-4"
-    const textSpanStyles = "p-2 after:content-['*'] after:ml-0.5 after:text-red-500 block font-bold"
-    const textInputStyles = "w-full rounded-xl h-10 placeholder-text-slate-400 pl-[14px] border-zinc-600 border-2"
 
     const options = [
         { label: 'Nigeria', value: 'ng' },
         { label: 'United States', value: 'us' },
         { label: 'Algeria', value: 'dz' },
-      ];
-    
-      const [value, setValue] = useState('us');
-    
-      const handleChange = (event) => {
-        setValue(event.target.value);
-      };
+    ];
+
+    const [value, setValue] = useState(
+        {
+            fullName: "",
+            email: "",
+            password: "",
+            country: "us",
+            phone:"",
+            verifyWith: "",
+            promotionalEmails: ""
+        }
+    );
+
+    const handleChange = (event) => {
+    const newdata = {...value}
+    newdata[event.target.id] = event.target.value
+    setValue(newdata)
+    // console.log(newdata)
+    };
+
+    const submit = (e) => {
+        e.preventDefault();
+    }
     
   return (
     <div>
-         <div className="md:h-1/5 md:w-1/5 mx-auto">
+        <div className="md:h-1/5 md:w-1/5 mx-auto">
             <img src={Scapay} alt="logo"/>
         </div>
-    <div className="w-full max-w-screen-md mx-auto h-screen">
+    <div className="w-full max-w-screen-md mx-auto h-auto pb-32">
         <div className="flex justify-center rounded-2xl bg-white shadow-lg text-sm text-slate-700"> 
             
-            <form className="w-9/12">
+            <form className="w-9/12" onSubmit={(e)=> submit(e)}>
 
             <p className="text-3xl font-bold my-10 text-center ">Let's get you started with <br/> your free Scapay Account</p>
 
             <div className={textDivStyles}>
             <span className={textSpanStyles}>Full name</span>
-            <input type="text" id="fullname" className={textInputStyles} placeholder="Firstname Lastname" />
+            <input onChange={(e)=>handleChange(e)} type="text" id="fullName" value={value.fullName} className={textInputStyles} placeholder="Firstname Lastname" />
             </div>
             
             <div className={textDivStyles}>
             <span className="p-2 after:content-['*'] after:ml-0.5 after:text-red-500 block  font-bold">Email</span>
-            <input type="email" id="email" className={textInputStyles} placeholder="name@example.com" />
+            <input onChange={(e)=>handleChange(e)} type="email" id="email" value={value.email} className={textInputStyles} placeholder="name@example.com" />
             </div>
 
             <div className={textDivStyles}>
             <span className={textSpanStyles}>Country/Region</span>
-            <DropDown options={options} value={value} onChange={handleChange} />
+            <DropDown options={options} value={value.country} onChange={handleChange} />
             </div>
 
             <div className={textDivStyles}>
             <span className={textSpanStyles}>Password</span>
-            <input type="password" id="password" className={textInputStyles} placeholder="Password" />
+            <input onChange={(e)=>handleChange(e)} type="password" id="password" value={value.password} className={textInputStyles} placeholder="Password" />
             </div>
 
             <div className={textDivStyles}>
             <span className={textSpanStyles}>Phone number</span>
-            <input type="phone" id="phone" className={textInputStyles} placeholder="+" />
+            <input onChange={(e)=>handleChange(e)} type="phone" id="phone" value={value.phone} className={textInputStyles} placeholder="+" />
             </div>
 
             <div className="my-4 block">
@@ -69,20 +88,20 @@ const SignUp = () => {
                 <span className="font-bold md:mr-10">Verify with:</span>
 
                 <label className="">                
-                <input type="radio" className="md:mr-2 h-4 w-4" name="contact" value="message"/>
+                <input type="radio" onChange={(e)=>handleChange(e)} className="md:mr-2 h-4 w-4" name="contact" value={value.verifyWith}/>
                 <span className="md:mr-10">Text message</span>
                 </label>
 
 
                 <label>
-                <input type="radio" className="md:mr-2 h-4 w-4" name="contact" value="email"/>
+                <input type="radio" onChange={(e)=>handleChange(e)} className="md:mr-2 h-4 w-4" name="contact" value={value.verifyWith}/>
                 <span className="md:mr-10">Email</span>
                 </label>
             </div>
 
             <div className="block">
             <label>
-                <input type="checkbox" className="md:mr-2 h-4 w-4" name="acknowledgment" value=""/>
+                <input onChange={(e)=>handleChange(e)} type="checkbox" className="md:mr-2 h-4 w-4" name="acknowledgment" value={value.promotionalEmails}/>
                 <span>Send me marketing and promotional emails</span>
             </label>
             </div>
@@ -109,4 +128,5 @@ const SignUp = () => {
   )
 }
 
+export {textDivStyles, textInputStyles, textSpanStyles}
 export default SignUp

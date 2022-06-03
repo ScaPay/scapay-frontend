@@ -16,7 +16,7 @@ const handleToggle = () => {
     <nav className=" pt-6 lg:pt-2 ">
     <div className="first-nav flex justify-between    ">
       <div className="logo items-center flex ">
-        <img src={Scapay} alt="" className="object-contain h-72 absolute pt-5"></img>
+        <img src={Scapay} alt="" className="object-contain h-36 absolute pt-4"></img>
         {/* <img class="block h-8 w-auto mr-2" src={glogo} alt="Workflow" /> */}
         {/* <img class="block w-8 h-8 " src={logo} alt="Workflow" /> */}
 
@@ -48,7 +48,7 @@ const handleToggle = () => {
 
       <div className={` hidden lg:block   sm:ml-6 pt-1 pl-3" `}>
         <div class="flex space-x-12 items-baseline item-center">
-          <Link to="/feeds">
+          <Link to="/sign-up">
             <a
               href="#"
               class=" hover:underline hover:underline-offset-8 text-secondary3    text-sm font-semibold  hover:text-primary px-3 py-2 rounded-md "

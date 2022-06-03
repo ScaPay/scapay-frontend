@@ -8,6 +8,7 @@ import {
 import HomePage from './Pages/home-page'
 import SignIn from "./Pages/sign-in";
 import SignUp from "./Pages/sign-up";
+import CompletePayment from "./Pages/complete-payment";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
 					<Route path='/' element={<HomePage />} />
 					<Route path='/auth' element={<SignIn />} />
 					<Route path='/sign-up' element={<SignUp />} />
+					<Route path='/complete-payment' element={<CompletePayment />} />
 				</Routes>
 			</Router>
 	  
