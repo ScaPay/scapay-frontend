@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Section = ({title, children, img, span, orderText, orderImg, imgW}) => {
+const Section = ({title, children, img, span, orderText, orderImg, imgW, height}) => {
 return (
     <div className="items-center py-10">
     
@@ -10,7 +10,7 @@ return (
                <p className="font-sm text-md pt-4 text-paracolor leading-8 break-all ">{children}</p>
             </div>
             <div className={`${imgW} ${orderImg} pt-10 md:pt-0`}>
-                <img className="object-fit h-80" src={img} alt="" />
+                <img className={`object-fit ${height}`}src={img} alt="" />
             </div>
         </div>
         
@@ -18,6 +18,10 @@ return (
     </div>
 )
 
+}
+
+Section.defaultProps = {
+    height: "h-80",
 }
 
 export default Section;
