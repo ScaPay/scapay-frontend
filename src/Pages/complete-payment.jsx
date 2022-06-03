@@ -20,20 +20,20 @@ const CompletePayment = () => {
                 <div className="grid grid-cols-1 divide-y">
 
                     <div></div>
-                    <div className="flex-row text-lg my-5">
+                    <div className="flex-row text-lg my-5 pt-3">
                         <span className="float-left">Price</span>
                         <span className="float-right">$300</span>
                     </div>
 
-                    <div className="flex-row text-lg my-5">
+                    <div className="flex-row text-lg my-5 pt-3">
                         <span className="float-left">Charges</span>
                         <span className="float-right">$3</span>
                     </div>
 
                 </div>
-                <div className="grid grid-cols-1 divide-y divide-black">
+                <div className="grid grid-cols-1 divide-y-2 divide-black">
                     <div></div>
-                    <div className="flex-row text-lg font-bold text-blue-900 my-5">
+                    <div className="flex-row text-lg font-bold text-blue-900 my-5 pt-3">
                         <span className="float-left">Total</span>
                         <span className="float-right">$303</span>
                     </div>
